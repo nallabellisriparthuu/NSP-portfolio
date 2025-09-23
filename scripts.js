@@ -129,4 +129,7 @@ document.getElementById("message").addEventListener("keydown", function (e) {
     document.querySelector(".submit-btn").click();
   }
 });
+// =========================
+// End of scripts.js
+// =========================
 
