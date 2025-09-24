@@ -107,7 +107,7 @@ a {
 
 /* Social Media */
 .home-social-media {
-  position: absolute; bottom: 60px; left: 40%; transform: translateX(-50%);
+  position: absolute; bottom: 60px; left: 39%; transform: translateX(-50%);
   display: flex; gap: 15px; padding: 10px; border-radius: 10px;
 }
 .home-icons-social-media { width: 50px; height: 50px; }
@@ -120,7 +120,7 @@ a {
 .social-media-link:hover { background: #f35906; color: #fff; transform: scale(1.15) rotate(-8deg);}
 .social-media-link:hover .icon-sm { color: #fff; }
 @media (max-width: 768px) {
-  .home-social-media { bottom: 30px; }
+  .home-social-media { bottom: 30px; left: 22%; }
   .icon-sm { font-size: 22px; }
   .home-icons-social-media { width: 40px; height: 40px; }
 }
