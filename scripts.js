@@ -1,3 +1,12 @@
+// Initialize AOS (Animate on Scroll)
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: 'ease-in-out', // default easing for AOS animations
+        once: true, // whether animation should happen only once - while scrolling down
+    });
+});
+
 // =========================
 // Navbar Toggle (Mobile)
 // =========================
@@ -77,7 +86,8 @@ document.getElementById("load-more-btn").addEventListener("click", function () {
   hiddenProjects.forEach((project, index) => {
     setTimeout(() => {
       project.style.display = "block";
-      project.classList.remove("hidden");
+      // AOS needs to be refreshed to see new elements
+      AOS.refresh();
     }, index * 200);
   });
   this.style.display = "none";
@@ -129,7 +139,3 @@ document.getElementById("message").addEventListener("keydown", function (e) {
     document.querySelector(".submit-btn").click();
   }
 });
-// =========================
-// End of scripts.js
-// =========================
-

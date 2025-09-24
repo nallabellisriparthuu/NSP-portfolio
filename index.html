@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sriparthu Portfolio</title>
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -29,7 +31,7 @@
 
     <!-- Home Section -->
     <div id="home" class="home-section">
-        <div class="home-section-content">
+        <div class="home-section-content" data-aos="fade-up">
             <div class="home-name">
                 <h1 class="head-name" id="typing-name"></h1>
             </div>
@@ -44,7 +46,7 @@
                 </span>
             </div>
         </div>
-        <div class="home-social-media">
+        <div class="home-social-media" data-aos="fade-up" data-aos-delay="400">
             <div class="home-icons-social-media">
                 <a href="https://www.linkedin.com/in/sri-parthu-198273284/" target="_blank" class="social-media-link">
                     <i class="fa-brands fa-linkedin icon-sm"></i>
@@ -76,9 +78,9 @@
     <!-- About Section -->
     <div id="about" class="about abt-pad">
         <div class="about-container">
-            <h2 class="head-sec"><span class="head-info">About Me</span></h2>
+            <h2 class="head-sec" data-aos="fade-up"><span class="head-info">About Me</span></h2>
             <div class="about-info-skills">
-                <div class="about-info">
+                <div class="about-info" data-aos="fade-right" data-aos-delay="200">
                     <h3 class="my-head-info">Let me introduce <br> myself!</h3>
                     <p class="my-info">
                         I'm a <strong>Frontend Web Developer</strong> passionate about building and managing responsive, high-performance websites and web applications. Skilled in <strong>HTML, CSS, JavaScript, React, and Angular,</strong> I specialize in creating seamless <strong>user experiences.</strong>
@@ -90,7 +92,7 @@
                         I'm open to exciting <strong>job opportunities</strong> where I can contribute, learn, and grow. <strong>Feel free to connect!</strong>
                     </p>
                 </div>
-                <div class="about-skills">
+                <div class="about-skills" data-aos="fade-left" data-aos-delay="300">
                     <h3 class="my-skill">My Skills</h3>
                     <div class="skills">
                         <div class="skills-skills">HTML</div>
@@ -105,7 +107,7 @@
                 </div>
             </div>
         </div>
-        <div class="contact-dwnld">
+        <div class="contact-dwnld" data-aos="fade-up" data-aos-delay="400">
             <span>
                 <a href="#contact" class="contact-btn contact-bg-colr-btn">
                     Contact <i class="fa-solid fa-phone"></i>
@@ -116,42 +118,40 @@
 
     <!-- Projects Section -->
     <div id="projects" class="projects-section">
-        <h2 class="projects-title">Projects</h2>
+        <h2 class="projects-title" data-aos="fade-up">Projects</h2>
         <div class="projects-container">
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                 <img src="project1.jpg" alt="project1">
                 <h2>Project 1</h2>
-                <p>
-                    Short description of Project 1.
-                </p>
+                <p>Short description of Project 1.</p>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                 <img src="project2.jpg" alt="Project 2">
                 <h2>Project 2</h2>
                 <p>Short description of Project 2.</p>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
                 <img src="project3.jpg" alt="Project 3">
                 <h2>Project 3</h2>
                 <p>Short description of Project 3.</p>
             </div>
-            <div class="project-card project-hidden">
+            <div class="project-card project-hidden" data-aos="fade-up" data-aos-delay="100">
                 <img src="project4.jpg" alt="Project 4">
                 <h2>Project 4</h2>
                 <p>Short description of Project 4.</p>
             </div>
-            <div class="project-card project-hidden">
+            <div class="project-card project-hidden" data-aos="fade-up" data-aos-delay="200">
                 <img src="project5.jpg" alt="Project 5">
                 <h2>Project 5</h2>
                 <p>Short description of Project 5.</p>
             </div>
-            <div class="project-card project-hidden">
+            <div class="project-card project-hidden" data-aos="fade-up" data-aos-delay="300">
                 <img src="project6.jpg" alt="Project 6">
                 <h2>Project 6</h2>
                 <p>Short description of Project 6.</p>
             </div>
         </div>
-        <div class="load-more-container">
+        <div class="load-more-container" data-aos="fade-up">
             <button id="load-more-btn" class="load-more-btn">
                 LOAD MORE <i class="fa-solid fa-hourglass-end"></i>
             </button>
@@ -160,8 +160,8 @@
 
     <!-- Contact Section -->
     <div id="contact" class="contact-section">
-        <h2 class="contact-title">Contact Me</h2>
-        <div class="contact-container">
+        <h2 class="contact-title" data-aos="fade-up">Contact Me</h2>
+        <div class="contact-container" data-aos="zoom-in" data-aos-delay="200">
             <form id="contact-form">
                 <div class="input-group">
                     <label for="name">Name</label>
@@ -182,7 +182,7 @@
     </div>
 
     <!-- Footer Section -->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
         <div class="footer-container">
             <div class="footer-logo">
                 <img src="images/img.png" alt="Sriparthu Logo" height="50px">
@@ -204,6 +204,7 @@
         </div>
     </footer>
     <script src="scripts.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>
-<!-- End of Path: index.html -->
