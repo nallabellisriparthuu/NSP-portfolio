@@ -419,6 +419,10 @@ body {
   gap: 50px;
   max-width: 1200px;
   margin: auto;
+
+  /* ensure grid tracks are equal height so items can stretch */
+  align-items: stretch;
+  grid-auto-rows: 1fr;
 }
 .project-card {
   background: #fff;
@@ -428,6 +432,12 @@ body {
   text-align: center;
   transition: background 0.5s, transform 0.3s cubic-bezier(0.4, 2, 0.6, 1),
     box-shadow 0.3s, filter 0.4s;
+
+  /* make each card a vertical flex container and fill the grid row */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
 }
 .project-card:hover {
   background: #fff7f0;
@@ -435,22 +445,36 @@ body {
   box-shadow: 0 12px 32px rgba(243, 89, 6, 0.15);
   filter: brightness(1.05);
 }
-.project-card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 18px;
-  transition: filter 0.4s, transform 0.4s;
+.project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: background 0.5s, transform 0.3s cubic-bezier(0.4, 2, 0.6, 1),
+    box-shadow 0.3s, filter 0.4s;
+
+  /* make each card a vertical flex container and fill the grid row */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
 }
 .project-card:hover img {
   filter: brightness(0.95) contrast(1.1);
   transform: scale(1.04) rotate(-2deg);
 }
 .project-card h2 {
-  margin-bottom: 10px;
+  margin: 12px 0 8px;
+  flex: 0 0 auto;
 }
 .project-card p {
   letter-spacing: 1.1px;
   font-size: 16px;
+  text-align: start;
+  /* allow the paragraph to take remaining space */
+  flex: 1 1 auto;
+  margin-top: 12px;
 }
 .project-hidden {
   display: none;
