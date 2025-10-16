@@ -1,210 +1,230 @@
+<!-- ...existing code... -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sriparthu Portfolio</title>
+
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- EmailJS SDK (supported version) - load BEFORE scripts.js -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+  </head>
+  <body>
     <!-- Navigation Bar -->
     <div class="navigation">
-        <a href="#home">
-            <div class="image-name">
-                <img src="images/img.png" alt="Sriparthu logo image" height="70px" class="logo-img">
-                <span class="my-name"><span class="my-fname">Sri</span>Parthu.</span>
-            </div>
-        </a>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <div class="navbar">
-            <ul class="nav-list">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+      <a href="#home">
+        <div class="image-name">
+          <img src="images/img.png" alt="Sriparthu logo image" height="70px" class="logo-img" />
+          <span class="my-name"><span class="my-fname">Sri</span>Parthu.</span>
         </div>
+      </a>
+      <div class="menu-icon" onclick="toggleMenu()" tabindex="0" role="button" aria-label="Toggle menu">☰</div>
+      <div class="navbar">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
     </div>
 
     <!-- Home Section -->
     <div id="home" class="home-section">
-        <div class="home-section-content" data-aos="fade-up">
-            <div class="home-name">
-                <h1 class="head-name" id="typing-name"></h1>
-            </div>
-            <div class="home-content">
-                <p class="para-content" id="typing-content"></p>
-            </div>
-            <div class="resume-dwnld" id="resume-button" style="display: none;">
-                <span>
-                    <a href="#" class="resume-btn resume-bg-colr-btn" download>
-                        Resume <i class="fa-solid fa-circle-arrow-down btn-colr-dwnlod"></i>
-                    </a>
-                </span>
-            </div>
+      <div class="home-section-content" data-aos="fade-up">
+        <div class="home-name">
+          <h1 class="head-name" id="typing-name"></h1>
         </div>
-        <div class="home-social-media" data-aos="fade-up" data-aos-delay="400">
-            <div class="home-icons-social-media">
-                <a href="https://www.linkedin.com/in/sri-parthu-198273284/" target="_blank" class="social-media-link">
-                    <i class="fa-brands fa-linkedin icon-sm"></i>
-                </a>
-            </div>
-            <div class="home-icons-social-media">
-                <a href="#" target="_blank" class="social-media-link">
-                    <i class="fa-brands fa-github icon-sm"></i>
-                </a>
-            </div>
-            <div class="home-icons-social-media">
-                <a href="https://hashnode.com/@sriparthu1014" target="_blank" class="social-media-link">
-                    <i class="fa-brands fa-hashnode icon-sm"></i>
-                </a>
-            </div>
-            <div class="home-icons-social-media">
-                <a href="#" target="_blank" class="social-media-link">
-                    <i class="fa-brands fa-instagram icon-sm"></i>
-                </a>
-            </div>
-            <div class="home-icons-social-media">
-                <a href="#" target="_blank" class="social-media-link">
-                    <i class="fa-brands fa-x-twitter icon-sm"></i>
-                </a>
-            </div>
+        <div class="home-content">
+          <p class="para-content" id="typing-content"></p>
         </div>
+        <div class="resume-dwnld" id="resume-button" style="display: none">
+          <span>
+            <a href="#" class="resume-btn resume-bg-colr-btn" download>
+              Resume <i class="fa-solid fa-circle-arrow-down btn-colr-dwnlod"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="home-social-media" data-aos="fade-up" data-aos-delay="400">
+        <div class="home-icons-social-media">
+          <a href="https://www.linkedin.com/in/sri-parthu-198273284/" target="_blank" class="social-media-link">
+            <i class="fa-brands fa-linkedin icon-sm"></i>
+          </a>
+        </div>
+        <div class="home-icons-social-media">
+          <a href="#" target="_blank" class="social-media-link">
+            <i class="fa-brands fa-github icon-sm"></i>
+          </a>
+        </div>
+        <div class="home-icons-social-media">
+          <a href="https://hashnode.com/@sriparthu1014" target="_blank" class="social-media-link">
+            <i class="fa-brands fa-hashnode icon-sm"></i>
+          </a>
+        </div>
+        <div class="home-icons-social-media">
+          <a href="#" target="_blank" class="social-media-link">
+            <i class="fa-brands fa-instagram icon-sm"></i>
+          </a>
+        </div>
+        <div class="home-icons-social-media">
+          <a href="#" target="_blank" class="social-media-link">
+            <i class="fa-brands fa-x-twitter icon-sm"></i>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- About Section -->
     <div id="about" class="about abt-pad">
-        <div class="about-container">
-            <h2 class="head-sec" data-aos="fade-up"><span class="head-info">About Me</span></h2>
-            <div class="about-info-skills">
-                <div class="about-info" data-aos="fade-right" data-aos-delay="200">
-                    <h3 class="my-head-info">Let me introduce <br> myself!</h3>
-                    <p class="my-info">
-                        I'm a <strong>Frontend Web Developer</strong> passionate about building and managing responsive, high-performance websites and web applications. Skilled in <strong>HTML, CSS, JavaScript, React, and Angular,</strong> I specialize in creating seamless <strong>user experiences.</strong>
-                    </p>
-                    <p class="my-info">
-                        I’ve worked on projects like <strong>e-commerce platforms</strong> and <strong>portfolio websites</strong> and have experience with backend technologies like Java and Spring Boot. I also share web development insights on <strong>LinkedIn</strong> and <strong>Instagram</strong> to help the dev community.
-                    </p>
-                    <p class="my-info">
-                        I'm open to exciting <strong>job opportunities</strong> where I can contribute, learn, and grow. <strong>Feel free to connect!</strong>
-                    </p>
-                </div>
-                <div class="about-skills" data-aos="fade-left" data-aos-delay="300">
-                    <h3 class="my-skill">My Skills</h3>
-                    <div class="skills">
-                        <div class="skills-skills">HTML</div>
-                        <div class="skills-skills">CSS</div>
-                        <div class="skills-skills">BootStrap</div>
-                        <div class="skills-skills">JavaScript</div>
-                        <div class="skills-skills">ReactJS</div>
-                        <div class="skills-skills">Git</div>
-                        <div class="skills-skills">GitHub</div>
-                        <div class="skills-skills">Linux</div>
-                    </div>
-                </div>
+      <div class="about-container">
+        <h2 class="head-sec" data-aos="fade-up">
+          <span class="head-info">About Me</span>
+        </h2>
+        <div class="about-info-skills">
+          <div class="about-info" data-aos="fade-right" data-aos-delay="200">
+            <h3 class="my-head-info">Let me introduce <br />myself!</h3>
+            <p class="my-info">
+              I'm a <strong>Frontend Web Developer</strong> passionate about building and managing responsive, high-performance websites and web applications. Skilled in <strong>HTML, CSS, JavaScript, React, and Angular,</strong> I specialize in creating seamless <strong>user experiences.</strong>
+            </p>
+            <p class="my-info">
+              I’ve worked on projects like <strong>e-commerce platforms</strong> and <strong>portfolio websites</strong> and have experience with backend technologies like Java and Spring Boot. I also share web development insights on <strong>LinkedIn</strong> and <strong>Instagram</strong> to help the dev community.
+            </p>
+            <p class="my-info">
+              I'm open to exciting <strong>job opportunities</strong> where I can contribute, learn, and grow. <strong>Feel free to connect!</strong>
+            </p>
+          </div>
+          <div class="about-skills" data-aos="fade-left" data-aos-delay="300">
+            <h3 class="my-skill">My Skills</h3>
+            <div class="skills">
+              <div class="skills-skills">HTML</div>
+              <div class="skills-skills">CSS</div>
+              <div class="skills-skills">BootStrap</div>
+              <div class="skills-skills">JavaScript</div>
+              <div class="skills-skills">ReactJS</div>
+              <div class="skills-skills">Git</div>
+              <div class="skills-skills">GitHub</div>
+              <div class="skills-skills">Linux</div>
             </div>
+          </div>
         </div>
-        <div class="contact-dwnld" data-aos="fade-up" data-aos-delay="400">
-            <span>
-                <a href="#contact" class="contact-btn contact-bg-colr-btn">
-                    Contact <i class="fa-solid fa-phone"></i>
-                </a>
-            </span>
-        </div>
+      </div>
+      <div class="contact-dwnld" data-aos="fade-up" data-aos-delay="400">
+        <span>
+          <a href="#contact" class="contact-btn contact-bg-colr-btn">
+            Contact <i class="fa-solid fa-phone"></i>
+          </a>
+        </span>
+      </div>
     </div>
 
     <!-- Projects Section -->
     <div id="projects" class="projects-section">
-        <h2 class="projects-title" data-aos="fade-up">Projects</h2>
-        <div class="projects-container">
-            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="project1.jpg" alt="project1">
-                <h2>Project 1</h2>
-                <p>Short description of Project 1.</p>
-            </div>
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="project2.jpg" alt="Project 2">
-                <h2>Project 2</h2>
-                <p>Short description of Project 2.</p>
-            </div>
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                <img src="project3.jpg" alt="Project 3">
-                <h2>Project 3</h2>
-                <p>Short description of Project 3.</p>
-            </div>
-            <div class="project-card project-hidden" data-aos="fade-up" data-aos-delay="100">
-                <img src="project4.jpg" alt="Project 4">
-                <h2>Project 4</h2>
-                <p>Short description of Project 4.</p>
-            </div>
-            <div class="project-card project-hidden" data-aos="fade-up" data-aos-delay="200">
-                <img src="project5.jpg" alt="Project 5">
-                <h2>Project 5</h2>
-                <p>Short description of Project 5.</p>
-            </div>
-            <div class="project-card project-hidden" data-aos="fade-up" data-aos-delay="300">
-                <img src="project6.jpg" alt="Project 6">
-                <h2>Project 6</h2>
-                <p>Short description of Project 6.</p>
-            </div>
+      <h2 class="projects-title" data-aos="fade-up">Projects</h2>
+      <div class="projects-container">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="project1.jpg" alt="project1" />
+          <h2>Project 1</h2>
+          <p>Short description of Project 1.</p>
         </div>
-        <div class="load-more-container" data-aos="fade-up">
-            <button id="load-more-btn" class="load-more-btn">
-                LOAD MORE <i class="fa-solid fa-hourglass-end"></i>
-            </button>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="project2.jpg" alt="Project 2" />
+          <h2>Project 2</h2>
+          <p>Short description of Project 2.</p>
         </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="project3.jpg" alt="Project 3" />
+          <h2>Project 3</h2>
+          <p>Short description of Project 3.</p>
+        </div>
+        <div class="project-card project-hidden" data-aos="fade-up" data-aos-delay="100">
+          <img src="project4.jpg" alt="Project 4" />
+          <h2>Project 4</h2>
+          <p>Short description of Project 4.</p>
+        </div>
+        <div class="project-card project-hidden" data-aos="fade-up" data-aos-delay="200">
+          <img src="project5.jpg" alt="Project 5" />
+          <h2>Project 5</h2>
+          <p>Short description of Project 5.</p>
+        </div>
+        <div class="project-card project-hidden" data-aos="fade-up" data-aos-delay="300">
+          <img src="project6.jpg" alt="Project 6" />
+          <h2>Project 6</h2>
+          <p>Short description of Project 6.</p>
+        </div>
+      </div>
+      <div class="load-more-container" data-aos="fade-up">
+        <button id="load-more-btn" class="load-more-btn">
+          LOAD MORE <i class="fa-solid fa-hourglass-end"></i>
+        </button>
+      </div>
     </div>
 
     <!-- Contact Section -->
     <div id="contact" class="contact-section">
-        <h2 class="contact-title" data-aos="fade-up">Contact Me</h2>
-        <div class="contact-container" data-aos="zoom-in" data-aos-delay="200">
-            <form id="contact-form">
-                <div class="input-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter your name" required>
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-                <p id="success-message" class="success-message hidden">Message sent successfully! ✅</p>
-            </form>
-        </div>
+      <h2 class="contact-title" data-aos="fade-up">Contact Me</h2>
+      <div class="contact-container" data-aos="zoom-in" data-aos-delay="200">
+        <form id="contact-form">
+          <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required />
+          </div>
+          <div class="input-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+          <!-- single message element; JS will set text + color -->
+          <p id="form-message" class="success-message hidden" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </div>
 
     <!-- Footer Section -->
     <footer class="footer" data-aos="fade-up">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="images/img.png" alt="Sriparthu Logo" height="50px">
-                <p>&copy; 2025 Sriparthu. All rights reserved.</p>
-            </div>
-            <ul class="footer-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="footer-social">
-                <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fa-brands fa-hashnode"></i></a>
-                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="images/img.png" alt="Sriparthu Logo" height="50px" />
+          <p>&copy; 2025 Sriparthu. All rights reserved.</p>
         </div>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-hashnode"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="scripts.js"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-</body>
+  </body>
 </html>
